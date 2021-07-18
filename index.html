@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css">
+    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reponsive.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h1 class="text-center">
+                        <span style="font-weight: bold; color: #0061c6;font-size: 50px;">VÉ XE</span>
+                        <br>
+                        <span style="color: #ff6f20">TRAVAEL</span>
+                    </h1>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- <div class="header-box-right">
+                                dsadas 1
+                            </div> -->
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header-box-right">
+                                <img width="60" height="60" src="images/icon-clock-92x92.png" alt="">
+                                <h4>Giờ làm việc</h4>
+                                <p>Thứ 2 - Thứ 6: <span style="color:#ff6f20">08h đến 21h</span></p>
+                                <p>Thứ 2 - Thứ 6: <span style="color:#ff6f20">08h đến 21h</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header-box-right">
+                                <img width="60" height="60" src="images/icon-phone-92x92.png" alt="">
+                                <h4>Tổng đài đặt vé</h4>
+                                <p class="phone">0123456789</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="btn-nav-mobile">
+                <button id="click-show-nav"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            </div>
+            <div class="container">
+                <div class="nav-main">
+                    <ul>
+                        <li>
+                            <a href="#">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="single-news.html">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="single-news.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-mobile">
+                <ul>
+                    <li>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="single-news.html">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="single-news.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <div class="banner">
+            <img style="width: 100%; height: 400px; object-fit: cover;" src="https://i.pinimg.com/originals/7e/2f/c7/7e2fc73366f80f96587cd79347d26b32.jpg" alt="">
+        </div> -->
+        <div class="banner">
+            <img style="width: 100%; height: 400px; object-fit: cover;" src="https://i.pinimg.com/originals/7e/2f/c7/7e2fc73366f80f96587cd79347d26b32.jpg" alt="">
+            <div class="form-search-banner shadow" style="width: 80%">
+                <div id="form-timkiem" class="row" style="width: 100%;padding: 15px" >
+                    <div class="form-datit col col-sm-4" style="background-color: #0061c6; padding-right: 0">
+                        <input list="categories" class="tags" type="text" placeholder="Nhập điểm đi..." id="diemdau" style="width: 90%;float: left;height: 40px;border:2px solid #0061c6">
+                        
+                        <button style="float:right; width: 10%;height: 40px;color: white;background-color: #0061c6;border: 0">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="col col-sm-1" style="padding-top: 5px;background-color: #0061c6;text-align: center">
+                        <button class="btn-replace" style="background-color:#0061c6;color: white;border: 0"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="form-datit col col-sm-4" style="background-color: #0061c6">
+                        <input list="categories" class="tags" type="text" placeholder="Nhập điểm đến..." id="diemden" style="height: 40px;width: 90%; float: left;border: 2px solid #0061c6">
+                        
+                        <button style="width: 10%;float:right;height: 40px;background-color: #0061c6;color: white;border: 0">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="col col-sm-3">
+                        <button class="btn-search" onclick="timXe()" style="width: 70%;height: 40px;border: 2px solid #d58512;background-color: orange;padding-top: 2px"><p style="color: white;font-size: 20px">Tìm vé xe</p></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="re-xe"></div>
+<div style="margin-top: 20px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9" >
+                <h3 class="title" id="title"></h3>
+                <h1 id="xeTimDuoc">
+                    <h1>...</h1>
+                </h1>
+            </div>
+            <div class="col-lg-3" id="boloc">
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="list-box">
+                    <h5>Các nhà xe chính</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Xe Anh Quốc</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Cô Tô Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Daily Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Dream Transport</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Anh Quốc</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Cô Tô Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Daily Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Dream Transport</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="list-box">
+                    <h5>Các chuyến xe chính</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Xe Anh Quốc</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Cô Tô Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Daily Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Dream Transport</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Anh Quốc</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Cô Tô Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Daily Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Dream Transport</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="list-box">
+                    <h5>Bến xe khách</h5>
+                    <ul>
+                        <li>
+                            <a href="#">Xe Anh Quốc</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Cô Tô Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Daily Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Dream Transport</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Anh Quốc</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Cô Tô Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Daily Limousine</a>
+                        </li>
+                        <li>
+                            <a href="#">Xe Dream Transport</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <script>
+            var title=document.getElementById("title");
+var diemdau=document.getElementById("diemdau");
+var diemden=document.getElementById("diemden");
+var xeTimDuoc=document.getElementById("xeTimDuoc");
+var dsxe=[
+    ["Xe Phương Trang","500.000","Hà Nội","TP.HCM"],
+["Xe Phương Trang","300.000","Hà Nội","Đà Nẵng"],
+["Xe Phương Trang","350.000","Đà Nẵng","TP.HCM"],
+
+    ["Xe Phương Trang","500.000","Hà Nội","TP.HCM"],
+    ["Xe Phương Trang","500.000","Hà Nội","TP.HCM"],
+
+    ["Xe Hoàng Long","500.000","Hà Nội","TP.HCM"],
+
+    ["Xe Hoàng Long","350.000","Đà Nẵng","Hà Nội"],
+    ["Xe Phương Trang","350.000","Đà Nẵng","Hà Nội"],
+    ["Xe Phương Trang","350.000","TP.HCM","Đà Nẵng"],
+    ["Xe Phương Trang","500.000","TP.HCM","Hà Nội"],
+    ["Xe Thịnh Phát","350.000","TP.HCM","Đà Nẵng"],
+    ["Xe Thịnh Phát","500.000","TP.HCM","Hà Nội"],
+    ["Xe Hoàng Long","300.000","Hà Nội","Đà Nẵng"],
+    ["Xe Hoàng Long","350.000","Đà Nẵng","TP.HCM"],
+    ["Xe Thịnh Phát","500.000","Hà Nội","TP.HCM"],
+    ["Xe Thịnh Phát","500.000","Hà Nội","TP.HCM"]
+];
+
+function timXe(){
+    var count=0;
+    var text=" <p></p>";
+    if(diemdau.value===""){
+        diemdau.placeholder="Vui lòng nhập điểm xuất phát";
+    }else if (diemden.value===""){
+        diemden.placeholder="Vui lòng nhập điểm đến";
+    }else {
+        var diemdau1=diemdau.value;
+        var diemden1=diemden.value;
+        var i;
+
+        for(i=0;i<dsxe.length;i++){
+            if((diemdau1===dsxe[i][2])&&(diemden1===dsxe[i][3])){
+                console.log("dung");
+                text+= "  <div class=\"box-search shadow\">\n" +
+                    "                        <div class=\"image\">\n" +
+                    "                            <a href=\"#\">\n" +
+                    "                                <img src=\"https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg\" alt=\"\">\n" +
+                    "                            </a>\n" +
+                    "                        </div>\n" +
+                    "                        <div class=\"info\">\n" +
+                    "                            <h2>\n" +
+                    "                                <a href=\"#\">"+dsxe[i][0]+"</a>\n" +
+                    "                                <span class=\"rate\">5 <i class=\"fa fa-star\" aria-hidden=\"true\"></i></span>\n" +
+                    "                                <span class=\"text-rate\">- 100 đánh giá</span>\n" +
+                    "                            </h2>\n" +
+                    "                            <div class=\"price\">\n" +
+                    "                                <span>"+dsxe[i][1]+"đ</span>\n" +
+                    "                            </div>\n" +
+                    "                            <p> Xe từ "+dsxe[i][2]+" đến "+dsxe[i][3]+"</p>\n" +
+                    "                            <div class=\"btn-action\">\n" +
+                    "                                <a href=\"single-search.html\">Xem chi tiết</a>\n" +
+                    "                                <a href=\"#\">Đặt vé</a>\n" +
+                    "                            </div>\n" +
+                    "                        </div>\n" +
+                    "                        <div class=\"clearfix\"></div>\n" +
+                    "                    </div>"
+                count++;
+            }
+        }
+        if(count>0){
+            document.getElementById("boloc").innerHTML="  <div class=\"sidebar\">\n" +
+                "                    <div class=\"items\">\n" +
+                "                        <h5>Tiêu chí phổ biến</h5>\n" +
+                "                        <div class=\"Filter__GroupItems-b104hz-3 kVXlqv\">\n" +
+                "                            <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                            </label>\n" +
+                "                            <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                            </label>\n" +
+                "                        </div>\n" +
+                "                    </div>\n" +
+                "                    <div class=\"items\">\n" +
+                "                        <h5>Giờ đi</h5>\n" +
+                "                        <div class=\"rangeSlider\">\n" +
+                "                            <div class=\"rangeSlider__range\"></div>\n" +
+                "                            <div class=\"rangeSlider__tooltips\">\n" +
+                "                                <!-- <div class=\"rangeSlider__tooltip rangeSlider__tooltip--from\"></div>\n" +
+                "                                <div class=\"rangeSlider__tooltip rangeSlider__tooltip--to\"></div> -->\n" +
+                "                            </div>\n" +
+                "                            <button type=\"button\" class=\"rangeSlider__handle rangeSlider__handle--from\" data-handle-type=\"from\"></button>\n" +
+                "                            <button type=\"button\" class=\"rangeSlider__handle rangeSlider__handle--to\" data-handle-type=\"to\"></button>\n" +
+                "                        </div>\n" +
+                "                    </div>\n" +
+                "                    <div class=\"items\">\n" +
+                "                        <h5>Giá vé</h5>\n" +
+                "                        <div class=\"rangeSlider\">\n" +
+                "                            <div class=\"rangeSlider__range\"></div>\n" +
+                "                            <div class=\"rangeSlider__tooltips\">\n" +
+                "                                <!-- <div class=\"rangeSlider__tooltip rangeSlider__tooltip--from\"></div>\n" +
+                "                                <div class=\"rangeSlider__tooltip rangeSlider__tooltip--to\"></div> -->\n" +
+                "                            </div>\n" +
+                "                            <button type=\"button\" class=\"rangeSlider__handle rangeSlider__handle--from\" data-handle-type=\"from\"></button>\n" +
+                "                            <button type=\"button\" class=\"rangeSlider__handle rangeSlider__handle--to\" data-handle-type=\"to\"></button>\n" +
+                "                        </div>\n" +
+                "                    </div>\n" +
+                "                    <div class=\"items\">\n" +
+                "                        <h5>Số chỗ trống</h5>\n" +
+                "                        <div class=\"rangeSlider\">\n" +
+                "                            <div class=\"rangeSlider__range\"></div>\n" +
+                "                            <div class=\"rangeSlider__tooltips\">\n" +
+                "                                <!-- <div class=\"rangeSlider__tooltip rangeSlider__tooltip--from\"></div>\n" +
+                "                                <div class=\"rangeSlider__tooltip rangeSlider__tooltip--to\"></div> -->\n" +
+                "                            </div>\n" +
+                "                            <button type=\"button\" class=\"rangeSlider__handle rangeSlider__handle--from\" data-handle-type=\"from\"></button>\n" +
+                "                            <button type=\"button\" class=\"rangeSlider__handle rangeSlider__handle--to\" data-handle-type=\"to\"></button>\n" +
+                "                        </div>\n" +
+                "                    </div>\n" +
+                "                    <div class=\"items\">\n" +
+                "                        <h5>Số chỗ trống</h5>\n" +
+                "                        <div class=\"nha-xe\">\n" +
+                "                            <input type=\"text\" placeholder=\"Nhập tên nhà xe\">\n" +
+                "                            <div class=\"box-scroll\">\n" +
+                "                                <div class=\"Filter__GroupItems-b104hz-3 kVXlqv\">\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                </div>\n" +
+                "                            </div>\n" +
+                "                        </div>\n" +
+                "                    </div>\n" +
+                "                    <div class=\"items\">\n" +
+                "                        <h5>Số chỗ trống</h5>\n" +
+                "                        <div class=\"nha-xe\">\n" +
+                "                            <input type=\"text\" placeholder=\"Nhập tên nhà xe\">\n" +
+                "                            <div class=\"box-scroll\">\n" +
+                "                                <div class=\"Filter__GroupItems-b104hz-3 kVXlqv\">\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                </div>\n" +
+                "                            </div>\n" +
+                "                        </div>\n" +
+                "                    </div>\n" +
+                "                    <div class=\"items\">\n" +
+                "                        <h5>Số chỗ trống</h5>\n" +
+                "                        <div class=\"nha-xe\">\n" +
+                "                            <input type=\"text\" placeholder=\"Nhập tên nhà xe\">\n" +
+                "                            <div class=\"box-scroll\">\n" +
+                "                                <div class=\"Filter__GroupItems-b104hz-3 kVXlqv\">\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 checkbox--highlight Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe an toàn Covid-19 (2)</span>\n" +
+                "                                    </label>\n" +
+                "                                    <label class=\"CheckBox__StyledCheckbox-sc-1be3z8j-0 Filter__CheckboxStyle-b104hz-8 jaZBTo ant-checkbox-wrapper\"><span class=\"ant-checkbox\"><input type=\"checkbox\" class=\"ant-checkbox-input\" value=\"\"><span class=\"ant-checkbox-inner\"></span></span><span>Xe VIP Limousine (18)</span>\n" +
+                "                                    </label>\n" +
+                "                                </div>\n" +
+                "                            </div>\n" +
+                "                        </div>\n" +
+                "                    </div>\n" +
+                "                </div>";
+        }else {
+            document.getElementById("boloc").innerHTML="";
+        }
+
+       title.innerText="Có "+count+" xe từ "+diemdau1+" đến "+diemden1;
+        console.log(text);
+        diemdau.value="";
+        diemden.value="";
+        xeTimDuoc.innerHTML=text;
+    }
+
+}
+        </script>
+        <section id="">
+            <div class="container">
+                <div class="title">
+                    <h3>Ưu đãi đặc biệt</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <img style="width: 100%; margin: 10px 0;" src="https://static.vexere.com/production/banners/330/banner-home.png" alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <img style="width: 100%; margin: 10px 0;" src="https://static.vexere.com/production/banners/330/banner-home.png" alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <img style="width: 100%; margin: 10px 0;" src="https://static.vexere.com/production/banners/330/banner-home.png" alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <img style="width: 100%; margin: 10px 0;" src="https://static.vexere.com/production/banners/330/banner-home.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="title">
+                    <h3>Các nhà xe chính</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="title">
+                    <h3>Các chuyến xe chính</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="title">
+                    <h3>Bến xe khách</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="box-items shadow">
+                            <a href="#">
+                                <img src="https://static.vexere.com/c/i/18773/xe-minh-tri-limousine-VeXeRe-oTJxjjw-1000x600.jpeg" alt="">
+                            </a>
+                            <h4>
+                                <a href="#">Xe Minh Trí Limousine</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="list-box">
+                            <ul>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Anh Quốc</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Cô Tô Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Daily Limousine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xe Dream Transport</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-used" class="shadow">
+            <h3>Tại sao nên sử dụng dịch vụ của chúng tôi ?</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 text-center">
+                        <div class="box-why">
+                            <img src="images/1.png" alt="">
+                            <h5>Giá rẻ mỗi ngày</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center">
+                        <div class="box-why">
+                            <img src="images/2.png" alt="">
+                            <h5>Thanh toán linh hoạt</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center">
+                        <div class="box-why">
+                            <img src="images/3.png" alt="">
+                            <h5>Hỗ trợ 24/7</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 text-center">
+                        <div class="box-why">
+                            <img src="images/4.png" alt="">
+                            <h5>Khách thực - đánh giá thực</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="doitac">
+            <h3>Tại sao nên sử dụng dịch vụ của chúng tôi ?</h3>
+            <div class="container">
+                <div class="row slick-doitac">
+                    <div class="col-md-4">
+                        <div class="item-doitac shadow ">
+                            <img class="shadow" src="https://cdn.lifehack.org/wp-content/uploads/2015/02/what-makes-people-happy.jpeg" alt="">
+                            <h4>Nguyễn Thị Lan</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item-doitac shadow ">
+                            <img class="shadow" src="https://cdn.lifehack.org/wp-content/uploads/2015/02/what-makes-people-happy.jpeg" alt="">
+                            <h4>Nguyễn Thị Lan</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item-doitac shadow ">
+                            <img class="shadow" src="https://cdn.lifehack.org/wp-content/uploads/2015/02/what-makes-people-happy.jpeg" alt="">
+                            <h4>Nguyễn Thị Lan</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item-doitac shadow ">
+                            <img class="shadow" src="https://cdn.lifehack.org/wp-content/uploads/2015/02/what-makes-people-happy.jpeg" alt="">
+                            <h4>Nguyễn Thị Lan</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item-doitac shadow ">
+                            <img class="shadow" src="https://cdn.lifehack.org/wp-content/uploads/2015/02/what-makes-people-happy.jpeg" alt="">
+                            <h4>Nguyễn Thị Lan</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="items-footer">
+                        <h3>
+                            Về chúng tôi
+                            <div></div>
+                        </h3>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="items-footer">
+                        <h3>
+                            Hỗ trợ
+                            <div></div>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">Hướng dẫn thanh toán</a>
+                            </li>
+                            <li>
+                                <a href="#">Quy chế</a>
+                            </li>
+                            <li>
+                                <a href="#">Câu hỏi thường gặp</a>
+                            </li>
+                            <li>
+                                <a href="#">Hướng dẫn thanh toán</a>
+                            </li>
+                            <li>
+                                <a href="#">Quy chế</a>
+                            </li>
+                            <li>
+                                <a href="#">Câu hỏi thường gặp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="items-footer">
+                        <h3>
+                            Giấy phép
+                            <div></div>
+                        </h3>
+                        <img style="width: 70%; margin-top: 20px;" src="https://xenangasia.com/wp-content/uploads/2019/11/huong-dan-dang-ky-website-voi-Bo-Cong-Thuong-3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>Website design by <a href="#">VoPhucDat.Com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script>
+        $('.slick-doitac').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            dots: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            adaptiveHeight: true,
+            focusOnSelect: false,
+            slickNext: true,
+            slickPrev: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+        $(document).ready(function(){
+            $("#click-show-nav").click(function(){
+                $(".nav-mobile").slideToggle();
+            });
+        });
+    </script>
+
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+    // var catVal = document.getElementsByTagName("input")[0],
+    //     cat = document.getElementById("categories");
+
+    // // catVal.style.fontSize = "1.3em";
+
+    // catVal.addEventListener("focus", function(event){
+    //     $(catVal).dblclick().val("");
+    // }, false);
+
+</script>
+
+<datalist id="categories">
+    <select multiple size=8>
+        <option value="Hà Nội">Hà Nội
+        <option value="TP.HCM">TP.HCM
+        <option value="Đà Nẵng">Đà Nẵng
+    </select>
+</datalist>
+
+</body>
+</html>

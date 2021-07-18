@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://kit.fontawesome.com/a076d05399.js" rel="icon">
+    <meta charset="UTF-8">
+    <title>Đăng Nhập</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <h1 class="text-center">
+                    <span style="font-weight: bold; color: #0061c6;font-size: 50px;">VÉ XE</span>
+                    <br>
+                    <span style="color: #ff6f20">TRAVAEL</span>
+                </h1>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- <div class="header-box-right">
+                            dsadas 1
+                        </div> -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="header-box-right">
+                            <img width="60" height="60" src="images/icon-clock-92x92.png" alt="">
+                            <h4>Giờ làm việc</h4>
+                            <p>Thứ 2 - Thứ 6: <span style="color:#ff6f20">08h đến 21h</span></p>
+                            <p>Thứ 2 - Thứ 6: <span style="color:#ff6f20">08h đến 21h</span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="header-box-right">
+                            <img width="60" height="60" src="images/icon-phone-92x92.png" alt="">
+                            <h4>Tổng đài đặt vé</h4>
+                            <p class="phone">0123456789</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="btn-nav-mobile">
+            <button id="click-show-nav"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </div>
+        <div class="container">
+            <div class="nav-main">
+                <ul>
+                    <li>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="single-news.html">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="single-news.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-mobile">
+            <ul>
+                <li>
+                    <a href="#">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="single-news.html">Giới thiệu</a>
+                </li>
+                <li>
+                    <a href="single-news.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- banner -->
+<div class="bg-img">
+    <div class="content">
+        <header>Đăng Nhập</header>
+        <form action="#">
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" required placeholder="Nhập Email hoặc số điện thoại..." id="uname">
+            </div>
+            <div class="field space">
+                <span class="fa fa-lock"></span>
+                <input type="password" class="pass-key" required placeholder="Mật khẩu..." id="pass">
+                <span class="show">Hiện</span>
+            </div>
+            <div class="pass">
+                <a href="forgotpassword.html">Quên mật khẩu ?</a>
+            </div>
+            <div class="field">
+                <a type="submit" value="Đăng Nhập" onclick="dangNhap()"> Đăng Nhập</a>
+            </div>
+        </form>
+        <script>
+            function dangNhap(){
+                var uname1=document.getElementById("uname");
+                var pass1=document.getElementById("pass");
+                var uname=uname1.value;
+                var pass=pass1.value;
+
+                var ds=[
+                    ["0921183474","123",1],
+                    ["18130288@st.hcmuaf.edu.vn","123",1],
+                    ["0836501374","123",1],
+                    ["ql@gmail.com","123",0]
+                ];
+                if (uname===""){
+                    uname1.placeholder="Vui lòng nhập Email hoặc số điện thoại";
+                }
+                else if (pass===""){
+                    pass1.placeholder="Vui lòng nhập mật khẩu";
+                }
+                else {
+                  var i;
+                    for( i=0;i<ds.length;i++){
+                        if(ds[i][0]===uname&&ds[i][1]===pass){
+                            if(ds[i][2]===1){
+                            window.location.href="index.html";
+                            }else {
+                                window.location.href="admin_qlve.html";
+                            }
+                        }else if(i===ds.length-1){
+                            pass1.value=null;
+                            pass1.placeholder="Sai tài khoản hoặc mật khẩu";
+                        }
+                    }
+                }
+            }
+        </script>
+        <div class="login">
+           Đăng nhập khác
+        </div>
+        <div class="links">
+            <div class="facebook">
+                <i class="fab fa-facebook-f"><span>Facebook</span></i>
+            </div>
+            <div class="google">
+                <i class="fab fa-google-plus-square"><span>Google</span></i>
+            </div>
+        </div>
+        <div class="signup">Chưa có tài khoản
+            <a href="register.html"><i>Đăng ký ngay</i></a>
+        </div>
+    </div>
+
+</div>
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="items-footer">
+                        <h3>
+                            Về chúng tôi
+                            <div></div>
+                        </h3>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="items-footer">
+                        <h3>
+                            Hỗ trợ
+                            <div></div>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">Hướng dẫn thanh toán</a>
+                            </li>
+                            <li>
+                                <a href="#">Quy chế</a>
+                            </li>
+                            <li>
+                                <a href="#">Câu hỏi thường gặp</a>
+                            </li>
+                            <li>
+                                <a href="#">Hướng dẫn thanh toán</a>
+                            </li>
+                            <li>
+                                <a href="#">Quy chế</a>
+                            </li>
+                            <li>
+                                <a href="#">Câu hỏi thường gặp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="items-footer">
+                        <h3>
+                            Giấy phép
+                            <div></div>
+                        </h3>
+                        <img style="width: 70%; margin-top: 20px;" src="https://xenangasia.com/wp-content/uploads/2019/11/huong-dan-dang-ky-website-voi-Bo-Cong-Thuong-3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>Website design by <a href="#">VoPhucDat.Com</a></p>
+            </div>
+        </div>
+    </footer>
+<script>
+		const pass_field = document.querySelector('.pass-key');
+		const showBtn = document.querySelector('.show');
+		showBtn.addEventListener('click', function(){
+			if(pass_field.type === "password"){
+				pass_field.type = "text";
+				showBtn.textContent = "Ẩn";
+				showBtn.style.color = "#3498db";
+			}else{
+				pass_field.type = "password";
+				showBtn.textContent = "Hiện";
+				showBtn.style.color = "#222";
+			}
+		});
+
+</script>
+</body>
+</html>
